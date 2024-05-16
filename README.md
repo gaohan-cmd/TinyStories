@@ -379,7 +379,7 @@ encoded_texts = tokenizer(examples['text'], add_special_tokens=False)
 
 根据前面的示例，我们知道这里 examples['text'] 其实是一个 List[str]，当一个 List 传入 tokenizer() 时，tokenizer 会自动进行 batch encode，得到的是 {'input_ids': List[int], 'attention_mask': List[int]}（当然，如果设置了 return_tensors='pt' 就会得到 Tensor）。
 
-add_special_tokens=False 则是让 tokenizer 不要加上特殊 token，在 LLaMA 中就是不会在句首加上 bos_token <s>。
+add_special_tokens=False 则是让 tokenizer 不要加上特殊 token，在 LLaMA 中就是不会在句首加上 bos_token\\<s\\>。
 
 ```
 text = 'Hello, world!'
